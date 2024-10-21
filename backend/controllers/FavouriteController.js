@@ -8,7 +8,7 @@ export const create = async (req, res) => {
     const { BranchType, Circle, DeliveryStatus, District,Name,Pincode,State } = req.body;
     // Input validation
     if (!BranchType || !Circle || !DeliveryStatus || !District,!Name,!Pincode,!State) {
-        return res.status(400).json({ error: "All fields (Title, Year, Type, Poster) are required" });
+        return res.status(400).json({ error: "All fields (BranchType, Circle, DeliveryStatus, District,Name,Pincode,State) are required" });
     }
     const sql = "INSERT INTO pincode (BranchType, Circle, DeliveryStatus, District,Name,Pincode,State) VALUES (?, ?, ?, ?,?,?,?)";
     try {
